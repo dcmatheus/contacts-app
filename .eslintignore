@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-commitlint.config.js
-vite.config.ts
+*.config.js
+*.config.ts
