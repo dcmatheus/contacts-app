@@ -1,12 +1,11 @@
-import { Camera } from 'react-feather';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-primary-200 bg-">
-      <div className="flex items-center justify-center h-screen">
-        <Camera className="w-4/5 h-4/5 text-primary-100 bg-" />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
