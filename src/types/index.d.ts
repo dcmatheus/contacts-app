@@ -11,4 +11,5 @@ export interface InputLabelProps {
 
 export interface HeaderProps {
   text?: string;
+  path: string;
 }

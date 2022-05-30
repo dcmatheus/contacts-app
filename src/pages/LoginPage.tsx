@@ -11,7 +11,7 @@ function LoginPage() {
         lgScreen && <LoginImage />
       }
       {
-        !mdScreen && <Header text="Login" />
+        !mdScreen && <Header text="Login" path="/" />
       }
       <LoginForm />
     </div>
