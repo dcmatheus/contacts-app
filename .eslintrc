@@ -23,5 +23,7 @@
     "react",
     "@typescript-eslint"
   ],
-  "rules": {}
+  "rules": {
+    "jsx-a11y/label-has-associated-control": "off"
+  }
 }
