@@ -10,8 +10,12 @@ function Header({ text, path }: HeaderProps) {
   return (
     <HeaderStyle>
       <BackButton onClick={() => navigate(path)}>
-        { mdScreen ? <ArrowLeft className="mr-2 h-7" /> : <ChevronLeft /> }
-        { mdScreen && <p>Voltar</p>}
+        { mdScreen ? (
+          <>
+            <ArrowLeft className="mr-2 h-7" />
+            <p>Voltar</p>
+          </>
+        ) : <ChevronLeft /> }
       </BackButton>
       { text && !mdScreen && <p className="text-primary-200">{ text }</p> }
       <p />

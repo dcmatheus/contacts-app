@@ -25,3 +25,9 @@ export interface LoginResponse {
   token?: string,
   invalidCredential?: string
 }
+
+export interface Contact {
+  name: string;
+  email: string;
+  mobile: string;
+}
