@@ -27,6 +27,7 @@ export interface LoginResponse {
 }
 
 export interface Contact {
+  id: number;
   name: string;
   email: string;
   mobile: string;
