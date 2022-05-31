@@ -1,7 +1,7 @@
 import api from './connect';
 import { LoginResponse } from '../types';
 
-const loginErrorMessage = 'Email ou senha incorreta. Verifique e tente novamente.';
+const invalidCredential = 'Email ou senha incorreta. Verifique e tente novamente.';
 
 async function loginUser(email: string, password: string): Promise<LoginResponse> {
   try {
@@ -9,7 +9,7 @@ async function loginUser(email: string, password: string): Promise<LoginResponse
     const { token } = response.data;
     return { token };
   } catch (error) {
-    return { invalidCredential: loginErrorMessage };
+    return { invalidCredential };
   }
 }
 

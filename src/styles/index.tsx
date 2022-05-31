@@ -26,15 +26,15 @@ export const SubButton = tw.button`
   w-full
   mt-1
   text-right
-  text-themeNeutral-500
+  text-themeNeutral-600
 `;
 
 export const Input = tw.input`
   px-6
   py-4
-  text-themeNeutral-600
+  text-themeNeutral-700
   rounded
-  bg-themeNeutral-300
+  bg-themeNeutral-400
   w-full
 `;
 
@@ -53,7 +53,7 @@ export const Title = tw.h1`
 
 export const Subtitle = tw.h2`
   mt-6
-  text-themeNeutral-500
+  text-themeNeutral-600
   md:text-lg
 `;
 
