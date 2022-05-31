@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import loginAmico from '../images/login-amico.svg';
-import PageTitle from '../components/PageTitle';
-import { Button } from '../styles';
+import loginAmico from 'images/login-amico.svg';
+import PageTitle from 'components/PageTitle';
+import { Button } from 'styles';
 
 function PresentationPage() {
   const navigate = useNavigate();

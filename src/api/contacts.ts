@@ -1,4 +1,4 @@
-import { Contact } from '../types';
+import { Contact } from 'types';
 import api from './connect';
 
 async function getContacts(token: string): Promise<Contact[]> {

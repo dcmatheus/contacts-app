@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import requestLoginUser from '../api/login';
-import InputLabel from '../components/InputLabel';
-import PageTitle from '../components/PageTitle';
+import requestLoginUser from 'api/login';
+import InputLabel from 'components/InputLabel';
+import PageTitle from 'components/PageTitle';
 import {
   Button, Form, SubButton,
-} from '../styles';
+} from 'styles';
 
 function LoginForm() {
   const [email, setEmail] = useState('');

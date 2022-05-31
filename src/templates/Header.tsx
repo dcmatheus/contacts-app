@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft } from 'react-feather';
-import useBreakpoints from '../hooks/useBreakpoints';
-import { HeaderProps } from '../types';
-import { BackButton, HeaderStyle } from '../styles';
+import useBreakpoints from 'hooks/useBreakpoints';
+import { HeaderProps } from 'types';
+import { BackButton, HeaderStyle } from 'styles';
 
 function Header({ text, path }: HeaderProps) {
   const { mdScreen } = useBreakpoints();

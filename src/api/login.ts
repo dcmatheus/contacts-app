@@ -1,5 +1,5 @@
+import { LoginResponse } from 'types';
 import api from './connect';
-import { LoginResponse } from '../types';
 
 const invalidCredential = 'Email ou senha incorreta. Verifique e tente novamente.';
 
