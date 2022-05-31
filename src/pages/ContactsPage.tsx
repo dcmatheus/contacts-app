@@ -1,7 +1,9 @@
+import Header from '../components/Header';
+
 function ContactsPage() {
   return (
-    <div>
-      <h1>Contacts</h1>
+    <div className="flex flex-col h-screen">
+      <Header path="/login" text="Listagem de usuários" />
     </div>
   );
 }

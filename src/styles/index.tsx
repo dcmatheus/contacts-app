@@ -57,7 +57,7 @@ export const Subtitle = tw.h2`
   md:text-lg
 `;
 
-export const Header = tw.header`
+export const HeaderStyle = tw.header`
   flex
   justify-between
   w-screen
@@ -67,4 +67,17 @@ export const Header = tw.header`
   text-base
   font-medium
   border-b-2
+  md:px-14
+  md:my-0
+  md:py-6
+  md:border-b-0
+  md:shadow-md
+`;
+
+export const BackButton = tw.button`
+  self-start
+  text-themeNeutral-600
+  md:flex
+  md:text-xl
+  md:font-medium
 `;
