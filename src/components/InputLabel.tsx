@@ -3,11 +3,13 @@ import {
 } from '../styles';
 import { InputLabelProps } from '../types';
 
-function InputLabel({ type, label, placeholder }: InputLabelProps) {
+function InputLabel({
+  type, label, placeholder, value, change,
+}: InputLabelProps) {
   return (
     <label>
       <InputTitle>{ label }</InputTitle>
-      <Input type={type} placeholder={placeholder} />
+      <Input type={type} placeholder={placeholder} value={value} onChange={change} />
     </label>
   );
 }

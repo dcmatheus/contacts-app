@@ -5,7 +5,7 @@ export const Form = tw.form`
   flex-col
   justify-between
   h-screen
-  px-3
+  px-4
   w-full
   md:px-0
   md:w-auto
@@ -61,7 +61,7 @@ export const Header = tw.header`
   flex
   justify-between
   w-screen
-  px-3
+  px-4
   py-4
   my-4
   text-base
