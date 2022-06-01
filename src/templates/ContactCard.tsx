@@ -1,9 +1,10 @@
 import useBreakpoints from 'hooks/useBreakpoints';
+import { Smartphone } from 'react-feather';
 import {
-  Edit,
-  Smartphone, Trash2,
-} from 'react-feather';
+  ContactCardStyle, TableCell, TableLine,
+} from 'styles';
 import { Contact } from 'types';
+import CardActions from 'components/CardActions';
 
 function ContactCard({
   contact: {
@@ -11,29 +12,15 @@ function ContactCard({
   }, index,
 }: { contact: Contact, index: number }) {
   const { mdScreen } = useBreakpoints();
-  const style = (index / 2 === 0) ? 'bg-themeNeutral-400' : '';
+  const cells = [id, name, mobile, email, <CardActions />];
   return mdScreen ? (
-    <div key={id} className={`flex justify-between py-5 px-7 ${style}`}>
-      <p className="w-1/12 font-bold text-primary-200">{id}</p>
-      <p className="w-1/4 font-medium text-themeNeutral-700">{name}</p>
-      <p className="w-1/4 font-medium text-themeNeutral-700">{mobile}</p>
-      <p className="w-1/4 font-medium text-themeNeutral-700">{email}</p>
-      <div className="flex w-1/6">
-        <button type="button" className="flex">
-          <Edit className="text-primary-100" />
-          <p className="ml-2 font-normal">Editar</p>
-        </button>
-        <button type="button" className="flex ml-10">
-          <Trash2 className="text-delete" />
-          <p className="ml-2 font-normal">Excluir</p>
-        </button>
-      </div>
-    </div>
+    <TableLine key={id} dark={(index % 2 === 0)}>
+      {cells.map((cell, i) => (
+        <TableCell start={i === 0} end={i === cells.length - 1}>{cell}</TableCell>
+      ))}
+    </TableLine>
   ) : (
-    <div
-      key={id}
-      className="flex justify-between h-40 p-6 mt-4 border-2 rounded-lg"
-    >
+    <ContactCardStyle key={id}>
       <div className="flex flex-col justify-between">
         <div>
           <p className="font-semibold">{name}</p>
@@ -45,12 +32,9 @@ function ContactCard({
         </div>
       </div>
       <div className="flex flex-col items-end justify-between">
-        <button type="button" className="font-medium text-themeNeutral-600">Editar</button>
-        <button type="button">
-          <Trash2 className="text-delete" />
-        </button>
+        <CardActions />
       </div>
-    </div>
+    </ContactCardStyle>
   );
 }
 

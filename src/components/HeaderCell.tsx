@@ -1,9 +1,10 @@
 import { ChevronDown } from 'react-feather';
 import { HeaderCellStyle } from 'styles';
+import { HeaderCellProps } from 'types';
 
-function HeaderCell({ children, minor }: { children: React.ReactNode, minor?: Boolean }) {
+function HeaderCell({ children, sm, md }: HeaderCellProps) {
   return (
-    <HeaderCellStyle minor={minor}>
+    <HeaderCellStyle sm={sm} md={md}>
       {children}
       <ChevronDown />
     </HeaderCellStyle>
@@ -11,7 +12,8 @@ function HeaderCell({ children, minor }: { children: React.ReactNode, minor?: Bo
 }
 
 HeaderCell.defaultProps = {
-  minor: false,
+  sm: false,
+  md: false,
 };
 
 export default HeaderCell;

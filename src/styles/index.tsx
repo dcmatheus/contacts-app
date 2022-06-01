@@ -80,5 +80,41 @@ export const HeaderCellStyle = tw.div`
   font-bold
   text-xl
   w-1/4
-  ${({ minor }: { minor: Boolean }) => (minor ? 'w-1/12' : '')}
+  ${({ md }: { md:Boolean }) => md && 'w-1/5'}
+  ${({ sm }: { sm:Boolean }) => sm && 'w-1/12'}
+`;
+
+export const TableCell = tw.div`
+  w-1/4
+  font-medium
+  ${({ start }: { start: Boolean }) => (start ? 'font-bold text-primary-200 w-1/12' : 'text-themeNeutral-700')}
+  ${({ end }: { end: Boolean }) => end && 'flex flex-wrap justify-between w-1/5'}
+`;
+
+export const ContactsListHeaderStyle = tw.div`
+  flex
+  justify-between
+  font-medium
+  md:py-5
+  md:border-b-2
+  md:px-7
+  md:border-themeNeutral-500
+`;
+
+export const TableLine = tw.div`
+  flex
+  justify-between
+  py-5
+  px-7
+  ${({ dark }: { dark:Boolean }) => dark && 'bg-themeNeutral-400'}
+`;
+
+export const ContactCardStyle = tw.div`
+  flex
+  justify-between
+  h-40
+  p-6
+  mt-4
+  border-2
+  rounded-lg
 `;

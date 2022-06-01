@@ -33,3 +33,9 @@ export interface Contact {
   email: string;
   mobile: string;
 }
+
+export interface HeaderCellProps {
+  children: React.ReactNode,
+  sm?: Boolean,
+  md?: Boolean,
+}
