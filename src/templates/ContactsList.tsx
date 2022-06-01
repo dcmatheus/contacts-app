@@ -1,13 +1,13 @@
 import { Contact } from 'types';
-import ContactCell from './ContactCell';
+import ContactCard from './ContactCard';
 import ContactsListHeader from './ContactsListHeader';
 
 function ContactsList({ contacts }: { contacts: Contact[] }) {
   return (
-    <div>
+    <div className="grow">
       <ContactsListHeader contacts={contacts} />
-      {contacts.map((contact) => (
-        <ContactCell contact={contact} />
+      {contacts.map((contact, index) => (
+        <ContactCard contact={contact} index={index} />
       ))}
     </div>
   );

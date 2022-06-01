@@ -1,30 +1,20 @@
-import { ChevronDown, Hash } from 'react-feather';
+import { Hash } from 'react-feather';
 import useBreakpoints from 'hooks/useBreakpoints';
 import { Contact } from 'types';
+import HeaderCell from 'components/HeaderCell';
+import { HeaderCellStyle } from 'styles';
 
 function ContactsListHeader({ contacts }: { contacts: Contact[] }) {
   const { mdScreen } = useBreakpoints();
+  const headerCells = [<Hash />, 'Nome', 'Telefone', 'Email'];
   return mdScreen ? (
-    <div className="grid grid-cols-5">
-      <div>
-        <Hash />
-        <ChevronDown />
-      </div>
-      <div>
-        Nome
-        <ChevronDown />
-      </div>
-      <div>
-        Celular
-        <ChevronDown />
-      </div>
-      <div>
-        Email
-        <ChevronDown />
-      </div>
-      <div>
+    <div className="flex justify-between py-5 border-b-2 px-7 border-themeNeutral-500">
+      {headerCells.map((cell, index) => (
+        <HeaderCell minor={index === 0 || index === contacts.length - 1}>{cell}</HeaderCell>
+      ))}
+      <HeaderCellStyle className="w-1/6">
         Ações
-      </div>
+      </HeaderCellStyle>
     </div>
   ) : (
     <div className="flex justify-between font-medium">

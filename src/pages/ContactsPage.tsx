@@ -16,11 +16,13 @@ function ContactsPage() {
   }, []);
 
   return (
-    <div className="flex flex-col w-screen h-screen">
+    <div className="flex flex-col items-center w-screen h-screen md:bg-themeNeutral-300">
       <Header path="/login" text="Listagem de usuários" />
-      <div className="mx-4 grow">
-        <ContactsPageTitle />
-        <ContactsList contacts={contacts} />
+      <div className="w-full md:bg-white md:w-11/12 lg:w-3/4 md:h-full md:rounded-lg md:my-7 md:shadow-md">
+        <div className="flex flex-col mx-4 grow">
+          <ContactsPageTitle />
+          <ContactsList contacts={contacts} />
+        </div>
       </div>
     </div>
 

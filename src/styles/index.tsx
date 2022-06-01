@@ -63,6 +63,7 @@ export const HeaderStyle = tw.header`
   font-medium
   border-b-2 md:border-b-0
   md:shadow-md
+  bg-white
 `;
 
 export const BackButton = tw.button`
@@ -70,4 +71,14 @@ export const BackButton = tw.button`
   md:flex
   md:text-xl
   md:font-medium
+`;
+
+export const HeaderCellStyle = tw.div`
+  flex
+  items-center
+  text-primary-200
+  font-bold
+  text-xl
+  w-1/4
+  ${({ minor }: { minor: Boolean }) => (minor ? 'w-1/12' : '')}
 `;
