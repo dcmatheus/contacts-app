@@ -27,11 +27,11 @@ function ContactsListHeader({ contacts }: { contacts: Contact[] }) {
       </div>
     </div>
   ) : (
-    <div>
-      <p>
+    <div className="flex justify-between font-medium">
+      <p className="text-base text-themeNeutral-600">
         {`Total: ${contacts.length} contato${contacts.length > 1 ? 's' : ''}`}
       </p>
-      <p>Ver Todos</p>
+      <p className="text-sm text-primary-200">Ver Todos</p>
     </div>
   );
 }

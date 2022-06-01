@@ -4,13 +4,9 @@ export const Form = tw.form`
   flex
   flex-col
   justify-between
-  h-screen
-  px-4
-  w-full
-  md:px-0
-  md:w-auto
-  lg:w-4/12
-  md:h-3/5
+  h-screen md:h-3/5
+  px-4 md:px-0
+  w-full md:w-auto lg:w-4/12
 `;
 
 export const Button = tw.button`
@@ -39,16 +35,15 @@ export const Input = tw.input`
 `;
 
 export const InputTitle = tw.p`
-  mt-6
   font-medium
   text-primary-200
 `;
 
 export const Title = tw.h1`
-  text-xl
+  text-xl md:text-4xl
   font-bold
   text-primary-200
-  md:text-4xl
+  ${({ compact }: { compact: Boolean }) => compact && 'md:text-2xl'}
 `;
 
 export const Subtitle = tw.h2`
@@ -61,21 +56,16 @@ export const HeaderStyle = tw.header`
   flex
   justify-between
   w-screen
-  px-4
-  py-4
-  my-4
+  px-4 md:px-14
+  py-4 md:py-6
+  mt-4 md:mt-0
   text-base
   font-medium
-  border-b-2
-  md:px-14
-  md:my-0
-  md:py-6
-  md:border-b-0
+  border-b-2 md:border-b-0
   md:shadow-md
 `;
 
 export const BackButton = tw.button`
-  self-start
   text-themeNeutral-600
   md:flex
   md:text-xl

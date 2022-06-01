@@ -1,6 +1,7 @@
 export interface PageTitleProps {
   title?: string;
   subtitle?: string;
+  compact?: boolean;
 }
 
 export interface InputLabelProps {

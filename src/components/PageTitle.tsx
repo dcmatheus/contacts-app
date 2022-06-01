@@ -1,12 +1,13 @@
 import { Subtitle, Title } from 'styles';
 import { PageTitleProps } from 'types';
 
-function PageTitle({ title, subtitle }: PageTitleProps) {
+function PageTitle({ title, subtitle, compact }: PageTitleProps) {
+  const styles = compact ? 'flex items-center' : '';
   return (
-    <fieldset className="text-center">
-      <Title>{ title }</Title>
+    <div className={`text-center ${styles}`}>
+      <Title compact={compact}>{ title }</Title>
       <Subtitle>{ subtitle }</Subtitle>
-    </fieldset>
+    </div>
   );
 }
 
