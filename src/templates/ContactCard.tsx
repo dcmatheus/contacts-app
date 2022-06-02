@@ -3,14 +3,14 @@ import { Smartphone } from 'react-feather';
 import {
   ContactCardStyle, TableCell, TableLine,
 } from 'styles';
-import { Contact } from 'types';
+import { ContactResponse } from 'types';
 import CardActions from 'components/CardActions';
 
 function ContactCard({
   contact: {
     name, email, mobile, id,
   }, index,
-}: { contact: Contact, index: number }) {
+}: { contact: ContactResponse, index: number }) {
   const { mdScreen } = useBreakpoints();
   const cells = [id, name, mobile, email, <CardActions id={id} />];
   return mdScreen ? (

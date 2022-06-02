@@ -1,19 +1,18 @@
 import { useMemo, useState } from 'react';
-import { Contact } from 'types';
-import { createContact, deleteContact as removeContact } from 'api/contacts';
+import { ContactResponse, Contact } from 'types';
+import { createContact, deleteContact as removeContact, updateContact } from 'api/contacts';
 import Context from './context';
 
 function ContactsContext({ children }: { children: React.ReactNode }) {
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [contacts, setContacts] = useState<ContactResponse[]>([]);
 
   async function addContact(newContact: Contact) {
     const token = localStorage.getItem('token') || '';
-    console.log('teste');
     const response = await createContact(token, newContact);
     setContacts([...contacts, { ...newContact, id: response.id }]);
   }
 
-  function addContacts(newContacts: Contact[]) {
+  function addContacts(newContacts: ContactResponse[]) {
     setContacts([...contacts, ...newContacts]);
   }
 
@@ -23,8 +22,12 @@ function ContactsContext({ children }: { children: React.ReactNode }) {
     await removeContact(token, id);
   }
 
-  function editContact(id: number, editedContact: Contact) {
-    setContacts(contacts.map((contact) => (contact.id === id ? editedContact : contact)));
+  async function editContact(id: number, editedContact: Contact) {
+    const token = localStorage.getItem('token') || '';
+    await updateContact(token, id, editedContact);
+    setContacts(contacts.map((contact) => (
+      contact.id === id ? { ...editedContact, id } : contact
+    )));
   }
 
   const values = useMemo(() => (

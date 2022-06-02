@@ -28,10 +28,13 @@ export interface LoginResponse {
 }
 
 export interface Contact {
-  id?: number;
   name: string;
   email: string;
   mobile: string;
+}
+
+export interface ContactResponse extends Contact {
+  id: number;
 }
 
 export interface HeaderCellProps {
@@ -41,10 +44,10 @@ export interface HeaderCellProps {
 }
 
 export interface ContactsContext {
-  contacts: Contact[];
-  setContacts: (contacts: Contact[]) => void;
+  contacts: ContactResponse[];
+  setContacts: (contacts: ContactResponse[]) => void;
   addContact: (newContact: Contact) => void;
-  addContacts: (newContacts: Contact[]) => void;
+  addContacts: (newContacts: ContactResponse[]) => void;
   deleteContact: (id: number) => void;
   editContact: (id: number, contact: Contact) => void;
 }
