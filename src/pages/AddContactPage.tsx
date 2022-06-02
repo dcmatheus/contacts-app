@@ -14,6 +14,13 @@ function AddContactPage() {
   const [email, setEmail] = useState('');
   const { mdScreen } = useBreakpoints();
 
+  const createContact = () => {
+    addContact({ name, mobile, email });
+    setName('');
+    setMobile('');
+    setEmail('');
+  };
+
   return mdScreen ? (
     <div className="flex flex-col items-center w-screen h-screen bg-themeNeutral-300">
       <Header path="/contacts" text="Cadastrar um novo contato" />
@@ -49,7 +56,7 @@ function AddContactPage() {
                 change={({ target }) => setMobile(target.value)}
               />
             </div>
-            <Button>Cadastrar contato</Button>
+            <Button type="button" onClick={() => createContact()}>Cadastrar contato</Button>
           </form>
         </div>
       </div>
@@ -87,7 +94,7 @@ function AddContactPage() {
           </div>
         </div>
 
-        <Button>Cadastrar contato</Button>
+        <Button type="button" onClick={() => createContact()}>Cadastrar contato</Button>
       </form>
     </div>
   );

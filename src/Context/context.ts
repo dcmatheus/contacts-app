@@ -7,6 +7,7 @@ const Context = createContext<ContactsContext>({
   addContacts: () => {},
   deleteContact: () => {},
   editContact: () => {},
+  setContacts: () => {},
 });
 
 export default Context;

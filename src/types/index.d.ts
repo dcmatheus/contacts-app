@@ -28,7 +28,7 @@ export interface LoginResponse {
 }
 
 export interface Contact {
-  id: number;
+  id?: number;
   name: string;
   email: string;
   mobile: string;
@@ -42,6 +42,7 @@ export interface HeaderCellProps {
 
 export interface ContactsContext {
   contacts: Contact[];
+  setContacts: (contacts: Contact[]) => void;
   addContact: (newContact: Contact) => void;
   addContacts: (newContacts: Contact[]) => void;
   deleteContact: (id: number) => void;
