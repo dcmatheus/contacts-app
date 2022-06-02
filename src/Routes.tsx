@@ -50,10 +50,7 @@ export default function Routes() {
           <div>Not Found</div>
         }
       />
-      <Route
-        path="*"
-        element={<Navigate to="/not-found" replace />}
-      />
+
     </Switch>
   );
 }
