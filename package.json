@@ -12,9 +12,15 @@
     "lint:fix": "npx eslint ./src --fix"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-feather": "^2.0.9"
+    "react-feather": "^2.0.9",
+    "react-responsive": "^9.0.0-beta.8",
+    "react-router-dom": "^6.3.0",
+    "tailwind-styled-components": "^2.1.7",
+    "vite-tsconfig-paths": "^3.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
