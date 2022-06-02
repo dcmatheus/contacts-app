@@ -5,11 +5,11 @@ import ContactCard from './ContactCard';
 import ContactsListHeader from './ContactsListHeader';
 
 function ContactsList() {
-  const { addContacts, contacts } = useContext(Context);
+  const { setContacts, contacts } = useContext(Context);
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      getContacts(token).then((newContacts) => addContacts(newContacts));
+      getContacts(token).then((newContacts) => setContacts(newContacts));
     }
   }, []);
 

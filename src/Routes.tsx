@@ -1,4 +1,6 @@
 import { Routes as Switch, Route, Navigate } from 'react-router-dom';
+import AddContactPage from 'pages/AddContactPage';
+import EditContactPage from 'pages/EditContactPage';
 import useBreakpoints from './hooks/useBreakpoints';
 import PresentationPage from './pages/PresentationPage';
 import LoginPage from './pages/LoginPage';
@@ -33,13 +35,13 @@ export default function Routes() {
       <Route
         path="/contacts/new"
         element={
-          <div>sgf</div>
+          <AddContactPage />
         }
       />
       <Route
         path="/contacts/edit/:id"
         element={
-          <div>sgf</div>
+          <EditContactPage />
         }
       />
       <Route
@@ -48,10 +50,7 @@ export default function Routes() {
           <div>Not Found</div>
         }
       />
-      <Route
-        path="*"
-        element={<Navigate to="/not-found" replace />}
-      />
+
     </Switch>
   );
 }

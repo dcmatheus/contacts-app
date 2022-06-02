@@ -8,7 +8,7 @@ function CardActions({ id }: { id: number }) {
   const { deleteContact } = useContext(Context);
   return (
     <>
-      <button type="button" className="flex" onClick={() => navigate(`contacts/edit/${id}`)}>
+      <button type="button" className="flex" onClick={() => navigate(`edit/${id}`)}>
         <Edit className="hidden mr-2 text-primary-100 md:block" />
         <p className="font-medium text-themeNeutral-600 md:text-inherit md:font-normal">Editar</p>
       </button>
