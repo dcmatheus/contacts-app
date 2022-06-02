@@ -10,9 +10,9 @@ function ContactsListHeader({ contacts }: { contacts: Contact[] }) {
   return mdScreen ? (
     <ContactsListHeaderStyle>
       {headerCells.map((cell, index) => (
-        <HeaderCell sm={index === 0}>{cell}</HeaderCell>
+        <HeaderCell sm={index === 0} key={`key-${cell}`}>{cell}</HeaderCell>
       ))}
-      <HeaderCellStyle md>
+      <HeaderCellStyle md="true">
         Ações
       </HeaderCellStyle>
     </ContactsListHeaderStyle>

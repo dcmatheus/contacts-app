@@ -39,11 +39,11 @@ export const InputTitle = tw.p`
   text-primary-200
 `;
 
-export const Title = tw.h1`
+export const Title: Function = tw.h1`
   text-xl md:text-4xl
   font-bold
   text-primary-200
-  ${({ compact }: { compact: Boolean }) => compact && 'md:text-2xl'}
+  ${({ compact }: { compact?: string }) => compact && 'md:text-2xl'}
 `;
 
 export const Subtitle = tw.h2`
@@ -80,15 +80,15 @@ export const HeaderCellStyle = tw.div`
   font-bold
   text-xl
   w-1/4
-  ${({ md }: { md:Boolean }) => md && 'w-1/5'}
-  ${({ sm }: { sm:Boolean }) => sm && 'w-1/12'}
+  ${({ md }: { md?:string }) => md && 'w-1/5'}
+  ${({ sm }: { sm?:string }) => sm && 'w-1/12'}
 `;
 
 export const TableCell = tw.div`
   w-1/4
   font-medium
-  ${({ start }: { start: Boolean }) => (start ? 'font-bold text-primary-200 w-1/12' : 'text-themeNeutral-700')}
-  ${({ end }: { end: Boolean }) => end && 'flex flex-wrap justify-between w-1/5'}
+  ${({ start }: { start?: Boolean }) => (start ? 'font-bold text-primary-200 w-1/12' : 'text-themeNeutral-700')}
+  ${({ end }: { end?: Boolean }) => end && 'flex flex-wrap justify-between w-1/5'}
 `;
 
 export const ContactsListHeaderStyle = tw.div`
@@ -106,7 +106,7 @@ export const TableLine = tw.div`
   justify-between
   py-5
   px-7
-  ${({ dark }: { dark:Boolean }) => dark && 'bg-themeNeutral-400'}
+  ${({ dark }: { dark?:Boolean }) => dark && 'bg-themeNeutral-400'}
 `;
 
 export const ContactCardStyle = tw.div`

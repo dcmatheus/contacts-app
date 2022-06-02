@@ -4,7 +4,7 @@ import { HeaderCellProps } from 'types';
 
 function HeaderCell({ children, sm, md }: HeaderCellProps) {
   return (
-    <HeaderCellStyle sm={sm} md={md}>
+    <HeaderCellStyle sm={sm ? 'true' : undefined} md={md ? 'true' : undefined}>
       {children}
       <ChevronDown />
     </HeaderCellStyle>

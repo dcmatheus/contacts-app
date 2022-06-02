@@ -31,6 +31,18 @@ export default function Routes() {
         }
       />
       <Route
+        path="/contacts/new"
+        element={
+          <div>sgf</div>
+        }
+      />
+      <Route
+        path="/contacts/edit/:id"
+        element={
+          <div>sgf</div>
+        }
+      />
+      <Route
         path="/not-found"
         element={
           <div>Not Found</div>

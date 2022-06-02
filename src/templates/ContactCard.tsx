@@ -12,7 +12,7 @@ function ContactCard({
   }, index,
 }: { contact: Contact, index: number }) {
   const { mdScreen } = useBreakpoints();
-  const cells = [id, name, mobile, email, <CardActions />];
+  const cells = [id, name, mobile, email, <CardActions id={id} />];
   return mdScreen ? (
     <TableLine key={id} dark={(index % 2 === 0)}>
       {cells.map((cell, i) => (
@@ -32,7 +32,7 @@ function ContactCard({
         </div>
       </div>
       <div className="flex flex-col items-end justify-between">
-        <CardActions />
+        <CardActions id={id} />
       </div>
     </ContactCardStyle>
   );

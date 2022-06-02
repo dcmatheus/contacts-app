@@ -39,3 +39,11 @@ export interface HeaderCellProps {
   sm?: Boolean,
   md?: Boolean,
 }
+
+export interface ContactsContext {
+  contacts: Contact[];
+  addContact: (newContact: Contact) => void;
+  addContacts: (newContacts: Contact[]) => void;
+  deleteContact: (id: number) => void;
+  editContact: (id: number, contact: Contact) => void;
+}
