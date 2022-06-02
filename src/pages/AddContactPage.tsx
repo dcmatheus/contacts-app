@@ -34,7 +34,7 @@ function AddContactPage() {
             <div className="grid grid-cols-2 gap-5 my-20">
               <div className="col-span-2">
                 <InputLabel
-                  label="Nome"
+                  label="Nome Completo"
                   type="text"
                   placeholder="Digite o nome do contato"
                   value={name}
@@ -70,7 +70,7 @@ function AddContactPage() {
           <div className="grid gap-5 mt-12">
             <div>
               <InputLabel
-                label="Nome"
+                label="Nome Completo"
                 type="text"
                 placeholder="Digite o nome do contato"
                 value={name}
