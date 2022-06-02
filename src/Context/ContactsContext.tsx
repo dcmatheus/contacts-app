@@ -1,13 +1,16 @@
 import { useMemo, useState } from 'react';
 import { Contact } from 'types';
-import { deleteContact as removeContact } from 'api/contacts';
+import { createContact, deleteContact as removeContact } from 'api/contacts';
 import Context from './context';
 
 function ContactsContext({ children }: { children: React.ReactNode }) {
   const [contacts, setContacts] = useState<Contact[]>([]);
 
-  function addContact(newContact: Contact) {
-    setContacts([...contacts, newContact]);
+  async function addContact(newContact: Contact) {
+    const token = localStorage.getItem('token') || '';
+    console.log('teste');
+    const response = await createContact(token, newContact);
+    setContacts([...contacts, { ...newContact, id: response.id }]);
   }
 
   function addContacts(newContacts: Contact[]) {
@@ -27,12 +30,13 @@ function ContactsContext({ children }: { children: React.ReactNode }) {
   const values = useMemo(() => (
     {
       contacts,
+      setContacts,
       addContact,
       addContacts,
       deleteContact,
       editContact,
     }
-  ), []);
+  ), [contacts]);
 
   return (
     <Context.Provider value={values}>
