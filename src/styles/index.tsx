@@ -49,6 +49,7 @@ export const Title: Function = tw.h1`
 export const Subtitle = tw.h2`
   mt-6
   text-themeNeutral-600
+  font-medium
   md:text-lg
 `;
 
