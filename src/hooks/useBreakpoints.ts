@@ -1,7 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import {
   sm, md, lg, xl, xxl,
-} from '../utils/breakpoints.json';
+} from 'utils/breakpoints.json';
 
 function useBreakpoints() {
   const smScreen = useMediaQuery({ minWidth: sm });

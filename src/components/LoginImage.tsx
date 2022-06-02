@@ -1,4 +1,4 @@
-import loginAmico from '../images/login-amico.svg';
+import loginAmico from 'images/login-amico.svg';
 
 function LoginImage() {
   return (

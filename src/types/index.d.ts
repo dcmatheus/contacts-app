@@ -1,6 +1,7 @@
 export interface PageTitleProps {
   title?: string;
   subtitle?: string;
+  compact?: boolean;
 }
 
 export interface InputLabelProps {
@@ -24,4 +25,25 @@ export interface UserCredentials {
 export interface LoginResponse {
   token?: string,
   invalidCredential?: string
+}
+
+export interface Contact {
+  id: number;
+  name: string;
+  email: string;
+  mobile: string;
+}
+
+export interface HeaderCellProps {
+  children: React.ReactNode,
+  sm?: Boolean,
+  md?: Boolean,
+}
+
+export interface ContactsContext {
+  contacts: Contact[];
+  addContact: (newContact: Contact) => void;
+  addContacts: (newContacts: Contact[]) => void;
+  deleteContact: (id: number) => void;
+  editContact: (id: number, contact: Contact) => void;
 }

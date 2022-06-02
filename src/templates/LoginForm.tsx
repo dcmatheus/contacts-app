@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import requestLoginUser from '../api/login';
-import InputLabel from '../components/InputLabel';
-import PageTitle from '../components/PageTitle';
+import requestLoginUser from 'api/login';
+import InputLabel from 'components/InputLabel';
+import PageTitle from 'components/PageTitle';
 import {
   Button, Form, SubButton,
-} from '../styles';
+} from 'styles';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -27,11 +27,13 @@ function LoginForm() {
   return (
     <Form>
       <fieldset>
-        <PageTitle
-          title="Bem-vindo(a)!"
-          subtitle="Faça login para acessar nossa plataforma"
-        />
-        <fieldset className="mt-6">
+        <div className="my-9 md:mt-0">
+          <PageTitle
+            title="Bem-vindo(a)!"
+            subtitle="Faça login para acessar nossa plataforma"
+          />
+        </div>
+        <fieldset>
           <InputLabel
             label="Email"
             type="text"
@@ -39,13 +41,15 @@ function LoginForm() {
             value={email}
             change={({ target }) => setEmail(target.value)}
           />
-          <InputLabel
-            label="Senha"
-            type="password"
-            placeholder="Digite sua senha"
-            value={password}
-            change={({ target }) => setPassword(target.value)}
-          />
+          <div className="mt-6">
+            <InputLabel
+              label="Senha"
+              type="password"
+              placeholder="Digite sua senha"
+              value={password}
+              change={({ target }) => setPassword(target.value)}
+            />
+          </div>
           <SubButton type="button" onClick={() => setDefault()}>Problemas com login?</SubButton>
         </fieldset>
       </fieldset>

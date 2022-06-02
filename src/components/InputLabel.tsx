@@ -1,7 +1,7 @@
 import {
   Input, InputTitle,
-} from '../styles';
-import { InputLabelProps } from '../types';
+} from 'styles';
+import { InputLabelProps } from 'types';
 
 function InputLabel({
   type, label, placeholder, value, change,
