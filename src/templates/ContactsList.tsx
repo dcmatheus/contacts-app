@@ -6,11 +6,9 @@ import ContactsListHeader from './ContactsListHeader';
 
 function ContactsList() {
   const { setContacts, contacts } = useContext(Context);
+
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      getContacts(token).then((newContacts) => setContacts(newContacts));
-    }
+    getContacts().then((newContacts) => setContacts(newContacts));
   }, []);
 
   return (
