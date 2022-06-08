@@ -7,8 +7,7 @@ function ContactsContext({ children }: { children: React.ReactNode }) {
   const [contacts, setContacts] = useState<ContactResponse[]>([]);
 
   async function addContact(newContact: Contact) {
-    const token = localStorage.getItem('token') || '';
-    const response = await createContact(token, newContact);
+    const response = await createContact(newContact);
     setContacts([...contacts, { ...newContact, id: response.id }]);
   }
 
@@ -17,14 +16,12 @@ function ContactsContext({ children }: { children: React.ReactNode }) {
   }
 
   async function deleteContact(id: number) {
+    await removeContact(id);
     setContacts(contacts.filter((contact) => contact.id !== id));
-    const token = localStorage.getItem('token') || '';
-    await removeContact(token, id);
   }
 
   async function editContact(id: number, editedContact: Contact) {
-    const token = localStorage.getItem('token') || '';
-    await updateContact(token, id, editedContact);
+    await updateContact(id, editedContact);
     setContacts(contacts.map((contact) => (
       contact.id === id ? { ...editedContact, id } : contact
     )));
