@@ -1,7 +1,7 @@
-import { Contact } from 'types';
+import { Contact, ContactResponse } from 'types';
 import api from './connect';
 
-export async function getContacts(token: string): Promise<Contact[]> {
+export async function getContacts(token: string): Promise<ContactResponse[]> {
   try {
     const response = await api.get('/contacts', {
       headers: {
@@ -43,9 +43,9 @@ export async function createContact(token: string, contact: Contact) {
   }
 }
 
-export async function updateContact(token: string, contact: Contact) {
+export async function updateContact(token: string, id: number, contact: Contact) {
   try {
-    const response = await api.put(`/contacts/${contact.id}`, contact, {
+    const response = await api.put(`/contacts/${id}`, contact, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

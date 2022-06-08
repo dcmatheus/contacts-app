@@ -2,7 +2,7 @@ import InputLabel from 'components/InputLabel';
 import Context from 'Context/context';
 import useBreakpoints from 'hooks/useBreakpoints';
 import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   Title, Subtitle, Button,
 } from 'styles';
@@ -15,12 +15,14 @@ function AddContactPage() {
   const [mobile, setMobile] = useState('');
   const [email, setEmail] = useState('');
   const { mdScreen } = useBreakpoints();
+  const navigate = useNavigate();
 
   const createContact = () => {
     editContact(Number(id), { name, mobile, email });
     setName('');
     setMobile('');
     setEmail('');
+    navigate('/contacts');
   };
 
   useEffect(() => {
@@ -103,7 +105,7 @@ function AddContactPage() {
           </div>
         </div>
 
-        <Button type="button" onClick={() => createContact()}>Editar contato</Button>
+        <Button type="button" onClick={() => createContact()}>Salvar alterações</Button>
       </form>
     </div>
   );

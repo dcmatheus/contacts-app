@@ -1,7 +1,11 @@
 {
   "name": "contacts-app",
   "private": false,
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "engines": {
+    "npm": "8.x",
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
