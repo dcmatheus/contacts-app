@@ -1,8 +1,8 @@
+import { useContext, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import InputLabel from 'components/InputLabel';
 import Context from 'Context/context';
 import useBreakpoints from 'hooks/useBreakpoints';
-import { useContext, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
 import {
   Title, Subtitle, Button,
 } from 'styles';

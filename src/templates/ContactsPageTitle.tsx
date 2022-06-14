@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import PageTitle from 'components/PageTitle';
 import useBreakpoints from 'hooks/useBreakpoints';
-import { useNavigate } from 'react-router-dom';
 import { Button } from 'styles';
 
 function ContactsPageTitle() {

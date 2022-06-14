@@ -1,6 +1,6 @@
+import { useContext, useEffect } from 'react';
 import { getContacts } from 'api/contacts';
 import Context from 'Context/context';
-import { useContext, useEffect } from 'react';
 import ContactCard from './ContactCard';
 import ContactsListHeader from './ContactsListHeader';
 
