@@ -1,5 +1,5 @@
-import useBreakpoints from 'hooks/useBreakpoints';
 import { Smartphone } from 'react-feather';
+import useBreakpoints from 'hooks/useBreakpoints';
 import {
   ContactCardStyle, TableCell, TableLine,
 } from 'styles';
