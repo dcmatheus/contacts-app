@@ -1,4 +1,4 @@
-import Context from 'Context/context';
+import Context from 'context/context';
 import { useContext } from 'react';
 import { Edit, Trash2 } from 'react-feather';
 import { useNavigate } from 'react-router-dom';

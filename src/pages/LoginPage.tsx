@@ -1,7 +1,7 @@
 import LoginImage from 'components/LoginImage';
 import useBreakpoints from 'hooks/useBreakpoints';
-import LoginForm from 'templates/LoginForm';
-import Header from 'templates/Header';
+import LoginForm from 'patterns/LoginForm';
+import Header from 'patterns/Header';
 
 function LoginPage() {
   const { lgScreen, mdScreen } = useBreakpoints();

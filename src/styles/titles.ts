@@ -5,7 +5,7 @@ export const InputTitle = tw.p`
   text-primary-200
 `;
 
-export const Title: Function = tw.h1`
+export const Title = tw.h1`
   text-xl md:text-4xl
   font-bold
   text-primary-200

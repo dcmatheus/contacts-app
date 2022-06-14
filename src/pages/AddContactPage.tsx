@@ -1,12 +1,12 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputLabel from 'components/InputLabel';
-import Context from 'Context/context';
+import Context from 'context/context';
 import useBreakpoints from 'hooks/useBreakpoints';
 import {
   Title, Subtitle, Button,
 } from 'styles';
-import Header from 'templates/Header';
+import Header from 'patterns/Header';
 
 function AddContactPage() {
   const { addContact } = useContext(Context);

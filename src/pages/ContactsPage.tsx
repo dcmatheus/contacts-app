@@ -1,6 +1,6 @@
-import ContactsList from 'templates/ContactsList';
-import Header from 'templates/Header';
-import ContactsPageTitle from 'templates/ContactsPageTitle';
+import ContactsList from 'patterns/ContactsList';
+import Header from 'patterns/Header';
+import ContactsPageTitle from 'patterns/ContactsPageTitle';
 
 function ContactsPage() {
   return (

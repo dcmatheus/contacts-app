@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactsContext from 'Context/ContactsContext';
 import ReactDOM from 'react-dom/client';
+import ContactsContext from 'context/ContactsContext';
 import App from './App';
 import './index.css';
 
