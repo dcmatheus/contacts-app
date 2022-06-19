@@ -34,25 +34,49 @@ Desenvolvido para o desafio técnico Front End da empresa [DIWE](https://diwe.co
 
 ## Tecnologias utilizadas
 
-- #### TypeScript: Linguagem de programação
+- #### TypeScript: Linguagem de programação;
 
-- #### React: Framework frontend principal.
+- #### React: Framework frontend principal;
 
-- #### React Feather: Biblioteca de ícones.
+- #### React Feather: Biblioteca de ícones;
 
-- #### React Responsive: Ferramenta que facilita a aplicação de responsividade.
+- #### React Responsive: Ferramenta que facilita a aplicação de responsividade;
 
-- #### Tailwind/TailwindStyledComponents: Framework css utilizado na estilização dos componentes.
+- #### Tailwind/TailwindStyledComponents: Framework css utilizado na estilização dos componentes;
 
-- #### Vite: Principal builder da aplicação.
+- #### Vite: Principal builder da aplicação;
 
-- #### Eslint: Ferramenta que mantém o código seguindo os principais padrões da comunidade.
+- #### Eslint: Ferramenta que mantém o código seguindo os principais padrões da comunidade;
 
-- #### Husky/CommitLint/Commitzen: Manter os commits padronizados.
+- #### Husky/CommitLint/Commitzen: Manter os commits padronizados;
 
 
 ---
 
+## Estrutura de pastas
+Os componentes foram separados baseados no [Atomic Design](https://dcmatheus.notion.site/Atomic-design-f0f6c647b56e44d49efef708bcbac6a6).
+```js
+src
+├── components // Molecules - Componentes mais fundamentais da aplicação
+│
+├── patterns // Organisms - Componentes complexos formados por diversos componentes fundamentais
+│
+├── pages // Templates|Pages - Componentes que representam as páginas em si
+│
+├── api // Conexões com a API
+│
+├── context // Context da aplicação(contextApi)
+│
+├── hooks // Hooks react personalizados
+│
+├── images // Imagens utilizadas na aplicação
+│
+├── styles // Estilização dos componentes
+│
+├── types // Arquivos de tipagem
+│
+└── utils // Arquivos úteis a aplicação que não entram em nenhuma das outras pastas
+```
 
 ## Deploy
 

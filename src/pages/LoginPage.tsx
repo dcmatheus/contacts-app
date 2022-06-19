@@ -1,4 +1,4 @@
-import LoginImage from 'components/LoginImage';
+import loginAmico from 'images/login-amico.png';
 import useBreakpoints from 'hooks/useBreakpoints';
 import LoginForm from 'patterns/LoginForm';
 import Header from 'patterns/Header';
@@ -8,7 +8,15 @@ function LoginPage() {
   return (
     <div className="flex flex-col items-center justify-around h-screen lg:flex-row">
       {
-        lgScreen && <LoginImage />
+        lgScreen && (
+        <object
+          data={loginAmico}
+          type="image/svg+xml"
+          className="w-5/12 h-3/5"
+        >
+          Usuário fazendo login
+        </object>
+        )
       }
       {
         !mdScreen && <Header text="Login" path="/" />
